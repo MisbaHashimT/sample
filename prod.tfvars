@@ -1,0 +1,5 @@
+# vpc_ipv4_cidr       = "10.0.0.0/16"
+# public_subnet_cidr  = "10.0.0.0/17"
+# private_subnet_cidr = "10.0.128.0/17"
+# availability_zone   = "us-east-2a"
+# environment         = "prod"
