@@ -204,7 +204,7 @@ resource "aws_launch_template" "linux-ami" {
     enabled = true
   }
 
-  user_data = filebase64("./module/script.sh")
+  user_data = filebase64("./module/userdata.sh")
 }
 
 # Target Group
@@ -268,13 +268,4 @@ resource "aws_autoscaling_group" "my-asg" {
   lifecycle {
     create_before_destroy = true
   }
-}
-
-output "alb_name" {
-  value = aws_lb.my-alb.dns_name
-}
-
-output "availability_zone_debug" {
-  value = var.availability_zone
-
 }
